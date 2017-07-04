@@ -1,6 +1,4 @@
 ﻿
-
-
 <html>
 <head>
     <title>注册界面</title>
