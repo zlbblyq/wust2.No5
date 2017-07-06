@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="../../CSS/login.css">
+    <script src="../../JavaScript/login.js" type="text/javascript"> </script>
+<font font-family="华文琥珀" size="30px" color="white">武汉科技大学图书馆</font>
+
+</head>
+<body>
+    <center>
+        <div id="input">
+            <h1 style="font-family:STLiti"><b>用户登陆</b></h1>
+            <br />
+            用 户 名:<input type="text" id="name" placeholder="请填写用户名" required="required" onblur="name1()" />
+            <br />
+            <span id="tel"></span>
+
+            <br />
+
+            输入密码:<input id="paswd" type="password" placeholder="请填写密码" onblur="pwd1()" required="required" onfocus="pwd2()">
+            <br />
+            <span id="pw"></span>
+
+            <br />          
+
+            <a href="http://localhost:52199/book/Login">
+            <input type="submit" id="button" value="登录" onsubmit="submit()" style="width:100px ">
+            </a>
+
+            <a href="http://localhost:52199/book/Book">
+            <input type="reset" id="reset" value="返回" style="width:100px">
+            </a>
+
+        </div>
+    </center>
+</body>
+</html>
+
