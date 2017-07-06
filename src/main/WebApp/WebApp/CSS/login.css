@@ -1,0 +1,20 @@
+﻿body{
+    background-image:url(/images/register/r5.jpg);
+    background-size:cover;
+}
+
+
+#input{
+    font-family:KaiTi;
+    font-size:18px;
+    color:black;
+    background-color:#F0F0F0;
+    width:350px;
+    height:350px;
+    left:800px;
+    top:150px;  
+    position:absolute;
+    text-align:center;
+}
+
+ 

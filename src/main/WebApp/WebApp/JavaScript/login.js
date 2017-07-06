@@ -29,16 +29,15 @@ function pwd1() {
         document.getElementById("pw").style.color = "red";
     }
 }
-function validate() {
+function submit() {
+    var name = document.getElementById("name").value;
     var qpw = document.getElementById("paswd").value;
-    var qpw2 = document.getElementById("paswd2").value;
-
-    if (qpw == qpw2 && p.length >= 6 && p.length <= 20) {
-        document.getElementById("qpwtx").innerHTML = "<font color='green'>√</font>";
-        document.getElementById("button").disabled = false;
+    if ((name.length != "") && (qpw.length >= 6 && qpw.length <= 20)) {
+        alert("登录成功！");
+       // window.location.href = 'http://localhost:52199/book/Login';
     }
     else {
-        document.getElementById("qpwtx").innerHTML = "<font color='red'>两次密码不相同或者格式错误</font>";
-        document.getElementById("button").disabled = true;
+        alert("请正确填写用户名和密码！");
     }
 }
+
