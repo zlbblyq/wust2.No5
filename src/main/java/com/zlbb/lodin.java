@@ -24,7 +24,14 @@ public class lodin extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+        StringBuilder sb = new StringBuilder();
+    	
+    	response.setContentType("text/json");
+    	
+    	sb.append("{\"firstName\": \"Brett\", \"lastName\": \"McLaughlin\"}");    	
+    	
+		response.getWriter().append(sb.toString());	
+		
 	}
 
 	/**
@@ -32,6 +39,7 @@ public class lodin extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
 
 }

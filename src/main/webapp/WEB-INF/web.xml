@@ -13,8 +13,20 @@
     <servlet-name>lodin</servlet-name>
     <servlet-class>com.zlbb.lodin</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ly</servlet-name>
+    <servlet-class>ly</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>lodin</servlet-name>
     <url-pattern>/lodin</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ly</servlet-name>
+    <url-pattern>/servlet/ly</url-pattern>
+  </servlet-mapping>
+ 
 </web-app>
