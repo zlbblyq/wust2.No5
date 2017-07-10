@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="wust2_No5"
+  id="myeclipse.1499654961073"
+  context-root="/wust2_No5"
+  j2ee-spec="6.0"
+  archive="wust2_No5.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
