@@ -37,9 +37,46 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setContentType("text/html");
+        response.setCharacterEncoding("UTF-8");
+        
+        String us = request.getParameter("username");
+        String pw = request.getParameter("password");
+        String pw1 = request.getParameter("password1");
+        //判断是否正确接收
+                if(us != null && pw != null && pw1 != null)
+                {
+                    if(!us.equals(""))
+                    {
+                
+                    if(pw.equals(pw1))
+                    {
+                        //记录用户信息
+                        
+                        //跳转到系统主页面
+                        response.sendRedirect("Main.jsp");
+                        
+                    }
+                    else
+                    {
+                        //否则就提示登录错误
+                        response.getWriter().write("请输入相同的密码");
+                    }
+                    }
+                    else
+                    {
+                        response.getWriter().write("帐号或密码不能为空字符串");
+                    }
+                }
+                else
+                {
+                    response.getWriter().write("请正确输入您的信息");
+                }
+            
+        response.getWriter().append("Served at: ").append(request.getContextPath());
+    }
 
-	}
-
+	
 	/**
 	 * The doPost method of the servlet. <br>
 	 *
@@ -52,9 +89,12 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 		
 	}
+		
+
+		
+	
 
 	/**
 	 * Initialization of the servlet. <br>

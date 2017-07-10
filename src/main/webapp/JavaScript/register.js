@@ -63,7 +63,7 @@ function submit()
     if ((name.length != "")&&(qpw.length >= 6 && qpw.length <= 20)&&(qpw == qpw2))
     {
         alert("注册成功，跳转到登陆界面！");
-        window.location.href ='http://localhost:52199/book/Login';
+        window.location.href ='http://localhost:8080/wust2_No5/views/Login.html';
     }
     else {
         alert("请正确填写用户名和密码！");

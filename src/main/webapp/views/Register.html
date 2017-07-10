@@ -26,7 +26,7 @@ function functionname()
         document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
         }
       } 
-    xmlhttp.open("GET","/wust2_No5/lodin",true);
+    xmlhttp.open("GET","/wust2_No5/servlet/RegisterServlet",true);
     xmlhttp.send();
     /*
     xmlhttp.open("POST","ajax_test.asp",true);
@@ -35,7 +35,6 @@ function functionname()
   //-->
  }
   </script>   
-
     <center>
         <div id="input">
             <h1 style="font-family:STLiti"><b>用户注册</b></h1>   
@@ -62,12 +61,13 @@ function functionname()
            <input type="checkbox" required="required">我已阅读注册手册<br/>
 
            <input type="submit" id="button" value="注册" onclick="submit()" style="width:100px ">
-           <button onclick="functionname()">点击这里</button>
-           <span id="myDiv"></span>
+              <span id="myDiv"></span>
            
+                 
+        
 
 
-            <a href="http://localhost:52199/book/Book"><input type="reset" id="reset" value="返回" style="width:100px"></a>
+            <a href="http://localhost:8080/wust2_No5/views/Login.html"><input type="reset" id="reset" value="返回" style="width:100px"></a>
 
 </div>
     </center>    
