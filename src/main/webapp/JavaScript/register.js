@@ -1,10 +1,23 @@
-﻿
+﻿function checkname(name){
+	// open.database()
+	//Transaction(){
+	//"select name from user where name==?" name}
+	
+	if(name=="admin")
+	 return 0;
+	else 
+	 return 1;
+}
 function name1() {
     var name = document.getElementById("name").value;
     if (name.length == "") {
         document.getElementById("tel").innerHTML = "用户名不能为空"
         document.getElementById("tel").style.color = "red";
-    } else {
+    } else if(checkname(name)==0){
+    	document.getElementById("tel").innerHTML = "该用户名已被使用"
+        document.getElementById("tel").style.color = "red";
+    }
+    else {
         document.getElementById("tel").innerHTML = "√"
         document.getElementById("tel").style.color = "green";
     }
