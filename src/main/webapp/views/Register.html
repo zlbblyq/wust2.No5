@@ -7,34 +7,6 @@
     <script src="../../wust2_No5/JavaScript/register.js" type="text/javascript"> </script>
 </head>
 <body>
-<script type="text/javascript">
-function functionname()
-{
- 
-    var xmlhttp;
-    if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
-      xmlhttp=new XMLHttpRequest();
-      }
-    else
-      {// code for IE6, IE5
-      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-    xmlhttp.onreadystatechange=function()
-      {
-      if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-        document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
-        }
-      } 
-    xmlhttp.open("GET","/wust2_No5/servlet/RegisterServlet",true);
-    xmlhttp.send();
-    /*
-    xmlhttp.open("POST","ajax_test.asp",true);
-    xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    xmlhttp.send("fname=Bill&lname=Gates");*/
-  //-->
- }
-  </script>   
     <center>
         <div id="input">
             <h1 style="font-family:STLiti"><b>用户注册</b></h1>   
