@@ -11,13 +11,13 @@
 function name1() {
     var name = document.getElementById("name").value;
     if (name.length == "") {
-        document.getElementById("tel").innerHTML = "用户名不能为空"
+        document.getElementById("tel").innerHTML = "用户名不能为空";
         document.getElementById("tel").style.color = "red";
     } else if(checkname(name)==0){
-    	document.getElementById("tel").innerHTML = "该用户名已被使用"
+    	document.getElementById("tel").innerHTML = "该用户名已被使用";
         document.getElementById("tel").style.color = "red";
-    }
-    else {
+   
+    }else {
         document.getElementById("tel").innerHTML = "√"
         document.getElementById("tel").style.color = "green";
     }

@@ -51,8 +51,7 @@ public class UserDao {
 	     
 	     public boolean add(User user) {   
 	         conn=getConnectionn();
-	         try {
-	        	 
+	         try {	       	 
 	 	            pStat=conn.prepareStatement("insert into users values(null,?,?)");  	
 	            	pStat.setString(1, user.getUsername());
 	 	            pStat.setString(2, user.getPassword());
@@ -67,11 +66,27 @@ public class UserDao {
 	      }  //end add
 	     
 	     
-	     public boolean checkname(User user) {
+	     public boolean check(User user) {
 	         conn=getConnectionn();
 	         try {
-	 	       pStat =conn.prepareStatement("select * from users where username=?");  
+	 	       pStat =conn.prepareStatement("select * from users where username=? and password=?");  
 	 	       pStat.setString(1, user.getUsername());
+	 	       pStat.setString(2, user.getPassword());
+	 	       rs=pStat.executeQuery();
+	 	       if( rs.next() )  
+	 	    	   return true;
+	 	      else    
+	 	    	  return false;
+	             }catch (Exception e) {    return false;      }
+	             finally{    close();      }			
+	      } //end check
+	     
+	     public boolean checkname(User user) {
+	         conn=getConnectionn();
+	         
+	         try {
+	           pStat =conn.prepareStatement("select * from users where username=? ");  
+	 	       pStat.setString(1, user.getUsername()); 	    
 	 	       rs=pStat.executeQuery();
 	 	       if( rs.next() )  
 	 	    	   return true;

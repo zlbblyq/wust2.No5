@@ -43,25 +43,22 @@ public class RegisterServlet extends HttpServlet {
 		user.setUsername(username);
 		user.setPassword(password);
 	    UserDao userdao=new UserDao();
+	    
 	    out.print(request.getParameter("username"));
 	    out.print(request.getParameter("password"));
 	    
-	    if( userdao.findname(user) ){
+	    if(userdao.findname(user) ){
 	    
-      	     request.setAttribute("info", "用户名已存在");     	        
-	         request.getRequestDispatcher("/views/RFail.html").forward(request, response);
+      	     request.setAttribute("info", "用户名已存在");  
+      	     response.sendRedirect(path+"/views/Fregister.html");
 	         
 	      }
 	    else{	
 		     boolean flag=userdao.add(user);
 		     if(flag){
 		         request.getSession().setAttribute("username", username);	
-	                       response.sendRedirect(path+"/views/Welcome.html");
-		     }
-		     else{
-		         request.getSession().setAttribute("err", "注册失败");
-		         response.sendRedirect(path+"/views/Register.html");
-		     }
+		         response.sendRedirect(path+"/views/Regout.html");
+		     }	    
 		}
 	    }  // end service
 

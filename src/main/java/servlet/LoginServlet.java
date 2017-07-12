@@ -28,19 +28,17 @@ public class LoginServlet extends HttpServlet {
 	    out.print(request.getParameter("username"));
 	    out.print(request.getParameter("password"));
       
-	    if(!userdao.checkname(user)){
-	    
+	    if(userdao.check(user)){	    
       	     request.setAttribute("info", "登陆成功");     	        
-	         request.getRequestDispatcher("/Welcome.html").forward(request, response);	         
+      	     response.sendRedirect(path+"/views/Logout.html");	         
 	    }	 	   
-	    else if(userdao.checkname(user)){
-		    
+	    else if(!userdao.checkname(user)){	    
      	     request.setAttribute("info", "用户没有注册");     	        
-	         request.getRequestDispatcher("/LFail1.html").forward(request, response);	         
+     	     response.sendRedirect(path+"/views/Flogin1.html");	         
 	    }	 	
 	    else{
 	         request.getSession().setAttribute("err", "登录失败");
-	         response.sendRedirect(path+"/LFail2.html");
+	         response.sendRedirect(path+"/views/Flogin2.html");
 	     
 	    }
 	    }
