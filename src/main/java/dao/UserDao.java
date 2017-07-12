@@ -5,7 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import beans.Admin;
 import beans.User;
+
 
 public class UserDao {
 	  public static final String DRIVER="org.gjt.mm.mysql.Driver";
@@ -90,11 +92,29 @@ public class UserDao {
 	 	       rs=pStat.executeQuery();
 	 	       if( rs.next() )  
 	 	    	   return true;
-	 	      else    
+	 	       else    
 	 	    	  return false;
 	             }catch (Exception e) {    return false;      }
 	             finally{    close();      }			
 	      } //end check
 	     
-
+	     public boolean admin(Admin admin) {
+	         conn=getConnectionn();
+	         try {
+	 	       pStat =conn.prepareStatement("select * from admin where adminname=? and pwd=?");  
+	 	       pStat.setString(1, admin.getAdminname());
+	 	       pStat.setString(2, admin.getPwd());
+	 	       rs=pStat.executeQuery();
+	 	       if( rs.next() )  
+	 	    	   return true;
+	 	      else    
+	 	    	  return false;
+	             }catch (Exception e) {    return false;      }
+	             finally{    close();      }			
+	      } //end admin
+	     
+	     
+	     
+	     
+		     	   
 }
