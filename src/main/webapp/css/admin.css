@@ -1,6 +1,8 @@
 ﻿body{
     background-image:url(../images/register/r5.PNG);
     background-size:cover;
+    background-repeat: no-repeat;
+	background-attachment:fixed
 }
 
 
@@ -11,9 +13,8 @@
     background-color:#F0F0F0;
     width:350px;
     height:350px;
-    left:800px;
+    left:700px;
     top:150px;  
     position:absolute;
     text-align:center;
 }
-
