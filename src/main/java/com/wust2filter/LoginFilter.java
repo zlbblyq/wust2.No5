@@ -44,7 +44,6 @@ public class LoginFilter implements Filter {
 	        if(url.indexOf("/Register.html") > -1||url.indexOf("/Book.html") > -1||url.indexOf("/Admin.html") > -1||url.indexOf("/Login.html") > -1) {
 	        	 chain.doFilter(request, response);
 	        }
-	
 	        // 判断如果没有取到用户姓名,就跳转到登陆页面
 	        else if (username== null || "".equals(username)) {
 	             // 跳转到登陆页面
