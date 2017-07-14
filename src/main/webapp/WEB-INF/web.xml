@@ -31,6 +31,13 @@
     <servlet-name>AdminServlet</servlet-name>
     <servlet-class>servlet.AdminServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MybookServlet</servlet-name>
+    <servlet-class>servlet.MybookServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>RegisterServlet</servlet-name>
     <url-pattern>/servlet/RegisterServlet</url-pattern>
@@ -39,13 +46,22 @@
     <servlet-name>AdminServlet</servlet-name>
     <url-pattern>/servlet/AdminServlet</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MybookServlet</servlet-name>
+    <url-pattern>/servlet/MybookServlet</url-pattern>
+  </servlet-mapping>
    <filter>
     <display-name>LoginFilter</display-name>
     <filter-name>LoginFilter</filter-name>
-    <filter-class>com.wust2filter.LoginFilter</filter-class>
+    <filter-class>filter.LoginFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>LoginFilter</filter-name>
     <url-pattern>*.html</url-pattern>
   </filter-mapping>
+<<<<<<< HEAD
+  
+  
+=======
+>>>>>>> branch 'master' of https://github.com/zlbblyq/wust2.No5.git
 </web-app>

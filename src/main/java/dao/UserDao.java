@@ -10,9 +10,17 @@ import beans.User;
 
 public class UserDao {
 	public static final String DRIVER = "org.gjt.mm.mysql.Driver";
+
+	public static final String DBURL = "jdbc:mysql://localhost:3306/user";
+
 	public static final String DBURL = "jdbc:mysql://localhost:3306/users";
+
 	public static final String DBUSER = "root";
+
+	public static final String DBPASS = "";
+
 	public static final String DBPASS = "1234";
+
 	private Connection conn = null;
 	private PreparedStatement pStat = null;
 	private ResultSet rs = null;

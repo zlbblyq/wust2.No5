@@ -31,8 +31,14 @@ public class AdminServlet extends HttpServlet {
 	    
 	    if(userdao.admin(admin)){	 
      	     request.setAttribute("info", "登陆成功");     	        
+<<<<<<< HEAD
+     	     response.sendRedirect(path+"/views/Adminout.html");	
+     	    request.getSession().setAttribute("user", "aaa");
+
+=======
      	     response.sendRedirect(path+"/views/Adminout.html");
      	    request.getSession().setAttribute("user", "aaa");
+>>>>>>> branch 'master' of https://github.com/zlbblyq/wust2.No5.git
 	    }
 	    else{
 	         request.getSession().setAttribute("err", "登录失败");
