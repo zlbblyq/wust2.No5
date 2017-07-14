@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.UserDao;
 import beans.User;
@@ -17,7 +18,7 @@ public class LoginServlet extends HttpServlet {
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
-			
+		
 		String username =request.getParameter("username");
 		String password = request.getParameter("password");
 		String path = request.getContextPath();   //获取请求路径
@@ -30,7 +31,8 @@ public class LoginServlet extends HttpServlet {
       
 	    if(userdao.check(user)){	    
       	     request.setAttribute("info", "登陆成功");     	        
-      	     response.sendRedirect(path+"/views/Logout.html");	         
+      	     response.sendRedirect(path+"/views/Logout.html");	
+      	   request.getSession().setAttribute("user", "aaa");
 	    }	 	   
 	    else if(!userdao.checkname(user)){	    
      	     request.setAttribute("info", "用户没有注册");     	        

@@ -32,7 +32,8 @@ public class AdminServlet extends HttpServlet {
 	    if(userdao.admin(admin)){	 
 	    	
      	     request.setAttribute("info", "登陆成功");     	        
-     	     response.sendRedirect(path+"/views/Adminout.html");	         
+     	     response.sendRedirect(path+"/views/Adminout.html");
+     	    request.getSession().setAttribute("user", "aaa");
 	    }
 	    else{
 	         request.getSession().setAttribute("err", "登录失败");
