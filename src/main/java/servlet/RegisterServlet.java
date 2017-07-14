@@ -42,16 +42,9 @@ public class RegisterServlet extends HttpServlet {
 		User user=new User();
 		user.setUsername(username);
 		user.setPassword(password);
-	    UserDao userdao=new UserDao();
-
-	    
+	    UserDao userdao=new UserDao();	    
 	    out.print(username);
-	    out.print(password);
-
-	  
-	    out.print(request.getParameter("username"));
-	    out.print(request.getParameter("password"));
-
+	    out.print(password);	
 	    
 	    if(userdao.findname(user) ) {
       	     request.setAttribute("info", "用户名已存在");  

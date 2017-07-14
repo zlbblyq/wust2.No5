@@ -1,5 +1,4 @@
 package servlet;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -9,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import beans.Admin;
-
 import dao.UserDao;
 
 public class AdminServlet extends HttpServlet {
@@ -30,13 +28,8 @@ public class AdminServlet extends HttpServlet {
 	    out.print(request.getParameter("pwd"));	    
 	    if(userdao.admin(admin)){	 
      	     request.setAttribute("info", "登陆成功");     	        
-
      	     response.sendRedirect(path+"/views/Adminout.html");	
-     	    request.getSession().setAttribute("user", "aaa");
-
-     	     response.sendRedirect(path+"/views/Adminout.html");
-     	    request.getSession().setAttribute("user", "aaa");
-
+     	     request.getSession().setAttribute("user", "aaa");
 	    }
 	    else{
 	         request.getSession().setAttribute("err", "登录失败");
