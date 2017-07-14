@@ -32,12 +32,12 @@ public class LoginServlet extends HttpServlet {
 	    if(userdao.check(user)){	    
       	     request.setAttribute("info", "登陆成功");     	        
       	     response.sendRedirect(path+"/views/Logout.html");	
-<<<<<<< HEAD
+
       	     request.getSession().setAttribute("user", "aaa");
 
-=======
+
       	   request.getSession().setAttribute("user", "aaa");
->>>>>>> branch 'master' of https://github.com/zlbblyq/wust2.No5.git
+
 	    }	 	   
 	    else if(!userdao.checkname(user)){	    
      	     request.setAttribute("info", "用户没有注册");     	        
