@@ -1,4 +1,4 @@
-package com.wust2filter;
+package filter;
 
 import java.io.IOException;
 import javax.servlet.Filter;
@@ -39,9 +39,13 @@ public class LoginFilter implements Filter {
 	HttpSession session = her.getSession();
 	String url=her.getRequestURI();
 
-	String username = (String) session.getAttribute("username");
+	String username = (String) session.getAttribute("user");
 	     // 登陆页面无需过滤
-	        if(url.indexOf("/Register.html") > -1||url.indexOf("/Book.html") > -1||url.indexOf("/Admin.html") > -1||url.indexOf("/Login.html") > -1) {
+	        if(url.indexOf("/Register.html") > -1
+	        		||url.indexOf("/Book.html") > -1
+	        		||url.indexOf("/Admin.html") > -1
+	        		||url.indexOf("/Login.html") > -1	        		
+	        		) {
 	        	 chain.doFilter(request, response);
 	        }
 	        // 判断如果没有取到用户姓名,就跳转到登陆页面
@@ -59,7 +63,7 @@ public class LoginFilter implements Filter {
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 		// TODO Auto-generated method stub
-		String urls=fConfig.getInitParameter(null);
+
 	}
 
 }
