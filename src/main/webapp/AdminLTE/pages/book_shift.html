@@ -76,7 +76,7 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="../views/Book.html" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="http://localhost:8080/wust2_No5/views/Book.html">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -180,19 +180,75 @@
    <section class="content">
       <!-- Small boxes (Stat box) -->
       <div id="mylib_content" >
-  	<h2>我的书架</h2>
-    <p>书架列表：</p>
-    <p style="margin:10px auto;">当前选择: <font color="red"></font> 共 <font color="red"></font> 条记录</p>
+  	<h2 style="font-family:宋体;font-size:30px"><b>我的书架</b></h2>
+    <br>
+    <p style="margin:10px auto;font-family:宋体;font-size:20px">当前选择:共 5 条记录</p>
 		<table  width="100%" border="0" cellpadding="1" cellspacing="1"bgcolor="#CCCCCC" class="table_line">
-		  <tr>
-		  	<td class="greytext" width="3%" bgcolor="#d8d8d8" class="greytext"></td>
-		  	<td class="greytext" width="25%" bgcolor="#d8d8d8" class="greytext">题名</td>
-			<td class="greytext" width="20%" bgcolor="#d8d8d8" class="greytext">责任者</td>
-			<td class="greytext" width="15%" bgcolor="#d8d8d8" class="greytext">出版社</td>
-			<td width="10%" align="center" class="greytext"bgcolor="#d8d8d8" class="greytext" >出版日期</td>
-			<td class="greytext" width="10%" bgcolor="#d8d8d8" class="greytext">索书号</td>
-			<td width="10%" align="center" class="greytext" bgcolor="#d8d8d8" class="greytext">操作</td>
+		  <tr>		  
+		  	<th class="greytext" width="15%" bgcolor="#d8d8d8" class="greytext" id="bname" style="font-family:宋体;font-size:20px">题名</th>		  	
+			<th class="greytext" width="10%" bgcolor="#d8d8d8" class="greytext" id="dname" style="font-family:宋体;font-size:20px">责任者</th>
+			<th class="greytext" width="18%" bgcolor="#d8d8d8" class="greytext" id="pname" style="font-family:宋体;font-size:20px">出版社</th>
+			<th width="10%" align="center" class="greytext"bgcolor="#d8d8d8" class="greytext" id="date" style="font-family:宋体;font-size:18px">出版日期</th>
+			<th class="greytext" width="10%" bgcolor="#d8d8d8" class="greytext" id="bookno" style="font-family:宋体;font-size:20px">索书号</th>
+			<th width="10%" align="center" class="greytext" bgcolor="#d8d8d8" class="greytext" style="font-family:宋体;font-size:20px">操作</th>
 		  </tr>
+		  <tr>
+		      <td style="font-family:宋体;font-size:18px">Java开发技术</td>
+		      <td style="font-family:宋体;font-size:18px">张三</td>
+		      <td style="font-family:宋体;font-size:18px">武汉科技大学出版社</td>
+		      <td style="font-family:宋体;font-size:18px">2008-08-12</td>
+		      <td style="font-family:宋体;font-size:18px">02001</td>
+		      <td style="font-family:宋体;font-size:18px">
+		         <a href=""><u>添加</u></a>
+		         <a href=""><u>删除</u></a>
+		      </td>
+		   </tr>
+		   <tr>
+		      <td style="font-family:宋体;font-size:18px">Web前端</td>
+		      <td style="font-family:宋体;font-size:18px">李四</td>
+		      <td style="font-family:宋体;font-size:18px">武汉科技大学出版社</td>
+		      <td style="font-family:宋体;font-size:18px">2010-09-12</td>
+		      <td style="font-family:宋体;font-size:18px">02002</td>
+		      <td style="font-family:宋体;font-size:18px">
+		         <a href=""><u>添加</u></a>
+		         <a href=""><u>删除</u></a>
+		      </td>
+		   </tr>
+		   <tr>
+		      <td style="font-family:宋体;font-size:18px">数据库</td>
+		      <td style="font-family:宋体;font-size:18px">王五</td>
+		      <td style="font-family:宋体;font-size:18px">武汉科技大学出版社</td>
+		      <td style="font-family:宋体;font-size:18px">2009-02-15</td>
+		      <td style="font-family:宋体;font-size:18px">02003</td>
+		      <td style="font-family:宋体;font-size:18px">
+		         <a href=""><u>添加</u></a>
+		         <a href=""><u>删除</u></a>
+		      </td>
+		   </tr>
+		   
+		   <tr>
+		      <td style="font-family:宋体;font-size:18px">C语言</td>
+		      <td style="font-family:宋体;font-size:18px">李四</td>
+		      <td style="font-family:宋体;font-size:18px">武汉科技大学出版社</td>
+		      <td style="font-family:宋体;font-size:18px">1999-08-02</td>
+		      <td style="font-family:宋体;font-size:18px">02004</td>
+		      <td style="font-family:宋体;font-size:18px">
+		         <a href=""><u>添加</u></a>
+		         <a href=""><u>删除</u></a>
+		      </td>
+		   </tr>
+		   <tr>
+		      <td style="font-family:宋体;font-size:18px">数据结构</td>
+		      <td style="font-family:宋体;font-size:18px">王五</td>
+		      <td style="font-family:宋体;font-size:18px">武汉科技大学出版社</td>
+		      <td style="font-family:宋体;font-size:18px">2001-01-10</td>
+		      <td style="font-family:宋体;font-size:18px">02003</td>
+		      <td style="font-family:宋体;font-size:18px">
+		         <a href=""><u>添加</u></a>
+		         <a href=""><u>删除</u></a>
+		      </td>
+		   </tr>
+
 			</table>
   </div>
       

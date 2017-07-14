@@ -34,7 +34,7 @@ function submit() {
     var qpw = document.getElementById("paswd").value;
     if ((name.length != "") && (qpw.length >= 6 && qpw.length <= 20)) {
         alert("登录成功！");
-       // window.location.href = 'http://localhost:52199/book/Login';
+       window.location.href = 'http://localhost:8080/wust2_No5/AdminLET/index.html';
     }
     else {
         alert("请正确填写用户名和密码！");
