@@ -42,21 +42,14 @@ public class RegisterServlet extends HttpServlet {
 		User user=new User();
 		user.setUsername(username);
 		user.setPassword(password);
-	    UserDao userdao=new UserDao();
-<<<<<<< HEAD
-	    
+	    UserDao userdao=new UserDao();	    
 	    out.print(username);
-	    out.print(password);
-=======
-	  
-	    out.print(request.getParameter("username"));
-	    out.print(request.getParameter("password"));
->>>>>>> branch 'master' of https://github.com/zlbblyq/wust2.No5.git
+	    out.print(password);	
 	    
 	    if(userdao.findname(user) ) {
       	     request.setAttribute("info", "用户名已存在");  
       	     response.sendRedirect(path+"/views/Fregister.html");
-      	   request.getSession().setAttribute("user", "aaa");
+      	    request.getSession().setAttribute("user", "aaa");
 	      }
 	    else{	
 		     boolean flag=userdao.add(user);

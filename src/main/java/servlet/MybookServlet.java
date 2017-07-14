@@ -29,8 +29,7 @@ public class MybookServlet extends HttpServlet {
 		String dname=request.getParameter("dname");
 		String pname=request.getParameter("pname");
 		String date=request.getParameter("date");
-		String bookno=request.getParameter("bookno");
-		
+		String bookno=request.getParameter("bookno");		
 		out.print(bname);
 		out.print(dname);
 		out.print(pname);
