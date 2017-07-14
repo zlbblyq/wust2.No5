@@ -10,9 +10,17 @@ import beans.User;
 
 public class UserDao {
 	public static final String DRIVER = "org.gjt.mm.mysql.Driver";
+
 	public static final String DBURL = "jdbc:mysql://localhost:3306/user";
+
+	public static final String DBURL = "jdbc:mysql://localhost:3306/users";
+
 	public static final String DBUSER = "root";
+
 	public static final String DBPASS = "";
+
+	public static final String DBPASS = "1234";
+
 	private Connection conn = null;
 	private PreparedStatement pStat = null;
 	private ResultSet rs = null;
@@ -44,7 +52,7 @@ public class UserDao {
 		conn = getConnectionn();
 		try {
 			pStat = conn
-					.prepareStatement("select * from users where username=?");
+					.prepareStatement("select * from user where username=?");
 			pStat.setString(1, user.getUsername());
 			rs = pStat.executeQuery();
 			if (rs.next())
@@ -61,7 +69,7 @@ public class UserDao {
 	public boolean add(User user) {
 		conn = getConnectionn();
 		try {
-			pStat = conn.prepareStatement("insert into users (username,password) values(?,?)");
+			pStat = conn.prepareStatement("insert into user (username,password) values(?,?)");
 			pStat.setString(1, user.getUsername());
 			pStat.setString(2, user.getPassword());
 			int cnt = pStat.executeUpdate();
@@ -81,7 +89,7 @@ public class UserDao {
 		conn = getConnectionn();
 		try {
 			pStat = conn
-					.prepareStatement("select * from users where username=? and password=?");
+					.prepareStatement("select * from user where username=? and password=?");
 			pStat.setString(1, user.getUsername());
 			pStat.setString(2, user.getPassword());
 			rs = pStat.executeQuery();
@@ -101,7 +109,7 @@ public class UserDao {
 
 		try {
 			pStat = conn
-					.prepareStatement("select * from users where username=? ");
+					.prepareStatement("select * from user where username=? ");
 			pStat.setString(1, user.getUsername());
 			rs = pStat.executeQuery();
 			if (rs.next())
