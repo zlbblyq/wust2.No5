@@ -60,6 +60,7 @@ public class LoginFilter implements Filter {
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 	
+		
 	}
 
 }

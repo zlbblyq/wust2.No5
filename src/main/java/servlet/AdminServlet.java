@@ -30,7 +30,6 @@ public class AdminServlet extends HttpServlet {
 	    out.print(request.getParameter("pwd"));
 	    
 	    if(userdao.admin(admin)){	 
-	    	
      	     request.setAttribute("info", "登陆成功");     	        
      	     response.sendRedirect(path+"/views/Adminout.html");
      	    request.getSession().setAttribute("user", "aaa");

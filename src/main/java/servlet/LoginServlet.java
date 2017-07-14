@@ -41,7 +41,6 @@ public class LoginServlet extends HttpServlet {
 	    else{
 	         request.getSession().setAttribute("err", "登录失败");
 	         response.sendRedirect(path+"/views/Flogin2.html");
-	     
 	    }
 	    }
 
