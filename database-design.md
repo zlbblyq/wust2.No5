@@ -39,3 +39,18 @@
        
        );
 ## 数据表
+   用户表
+   
+<table border="1"> 
+<tr><th>编号<th>用户名<th>密码
+<tr><th>1<td>wzl<td>123456
+<tr><th>2<td>zb<td>111111
+<tr><th>3<td>ly<td>123123
+</table>
+
+管理员表
+
+<table border="1"> 
+<tr><th>编号<th>管理员名<th>密码
+<tr><th>1<td>admin<td>manage
+</table>
