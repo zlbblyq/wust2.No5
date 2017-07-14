@@ -27,8 +27,7 @@ public class AdminServlet extends HttpServlet {
 		admin.setPwd(pwd);		
 	    UserDao userdao=new UserDao();
 	    out.print(request.getParameter("adminname"));
-	    out.print(request.getParameter("pwd"));
-	    
+	    out.print(request.getParameter("pwd"));	    
 	    if(userdao.admin(admin)){	 
      	     request.setAttribute("info", "登陆成功");     	        
 

@@ -16,7 +16,6 @@ public class UserDao {
 	private Connection conn = null;
 	private PreparedStatement pStat = null;
 	private ResultSet rs = null;
-
 	public Connection getConnectionn() {
 		try {
 			Class.forName(DRIVER).newInstance();
@@ -25,7 +24,6 @@ public class UserDao {
 			return null;
 		}
 	}
-
 	// end Connection
 	public void close() {
 		try {

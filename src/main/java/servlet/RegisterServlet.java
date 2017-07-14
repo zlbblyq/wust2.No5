@@ -56,7 +56,7 @@ public class RegisterServlet extends HttpServlet {
 	    if(userdao.findname(user) ) {
       	     request.setAttribute("info", "用户名已存在");  
       	     response.sendRedirect(path+"/views/Fregister.html");
-      	   request.getSession().setAttribute("user", "aaa");
+      	    request.getSession().setAttribute("user", "aaa");
 	      }
 	    else{	
 		     boolean flag=userdao.add(user);
