@@ -56,22 +56,28 @@
 	<td>王志龙</td>
     </tr>
     <td rowspan="3">后期</td>
-	<td><br></td>
-	<td></td>
+	<td><br>过滤器</td>
+	<td>廖佳路</td>
 	</tr>
 	<tr>
-	<td></td>
-	<td></td>
+	<td>文档准备，画图</td>
+	<td>李袁，黄莹，朱贝，廖佳路</td>
 	</tr>
 	<tr>
-	<td></td>
-	<td></td>
+	<td>测试用例，项目演示</td>
+	<td>李袁，王志龙</td>
     </tr>
 </table>
 
+# 系统结构图：
 
+### 一、功能结构图
+![](http://chuantu.biz/t5/136/1500101566x1035452427.png)
 
+### 二、用例图
+![](http://chuantu.biz/t5/136/1500101724x1035452427.png)
 
-
+# 开发环境及开发工具：
+Windows，Eclipse，MyEclipse，Sublime Text3,Git,Maven,JUnit，MYSQL
 
 
