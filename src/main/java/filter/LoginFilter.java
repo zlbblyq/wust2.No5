@@ -44,7 +44,14 @@ public class LoginFilter implements Filter {
 	        if(url.indexOf("/Register.html") > -1
 	        		||url.indexOf("/Book.html") > -1
 	        		||url.indexOf("/Admin.html") > -1
-	        		||url.indexOf("/Login.html") > -1	        		
+	        		||url.indexOf("/Login.html") > -1	
+	        		||url.indexOf("/Fadmin.html") > -1
+	        		||url.indexOf("/Adminout.html") > -1
+	        		||url.indexOf("/Flogin1.html") > -1
+	        		||url.indexOf("/Flogin2.html") > -1
+	        		||url.indexOf("/Fregister.html") > -1
+	        		||url.indexOf("/Logout.html") > -1
+	        		||url.indexOf("/Regout.html") > -1
 	        		) {
 	        	 chain.doFilter(request, response);
 	        }
